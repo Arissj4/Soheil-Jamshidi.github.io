@@ -29,4 +29,6 @@ steps:
 
   - name: Run format check
     run: npm run format:check
-    
+
+  - name: Run build
+    run: npm run build
