@@ -1,4 +1,6 @@
-export default function Header({ user }: { user: string }) {
+import type { User } from "../types/User";
+
+export default function Header({ user }: { user: User }) {
   return (
     <>
       <header className="w-full flex flex-wrap justify-between py-6 border-b border-[#232a31]">
@@ -8,9 +10,8 @@ export default function Header({ user }: { user: string }) {
               href="#"
               className="text-xl font-[700px] text-[#e9ecef] hover:text-[#a1aab3]"
             >
-              {user}
+              {user.name}
             </a>
-            a
           </h4>
         </div>
 
