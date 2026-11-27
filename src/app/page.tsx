@@ -1,4 +1,6 @@
+import CostumeButton from "./components/CostumeButton";
 import Header from "./components/Header";
+import { ButtonType } from "./types/Button";
 import { User } from "./types/User";
 
 export default function Home() {
@@ -8,7 +10,20 @@ export default function Home() {
     city: "Torino",
     email: "soheil.jamshidi.4@gmail.com",
     introduction: "I build fast, accessible interfaces with React and Next.js.",
-    desirre: "Open to Front-End and Junior Full-Stack roles. I turn ideas into working products, from the interface to the API behind it.v",
+    desirre:
+      "Open to Front-End and Junior Full-Stack roles. I turn ideas into working products, from the interface to the API behind it.v",
+  };
+
+  const projectButton: ButtonType = {
+    text: "View projects",
+    text_color: "#0b0d10",
+    bg_color: "#7cf5c8",
+  };
+
+  const donwloadCVButton: ButtonType = {
+    text: "View projects",
+    text_color: "#e9ecef",
+    border: "1px solid #3a444d",
   };
 
   return (
@@ -17,7 +32,10 @@ export default function Home() {
         <Header user={user} />
 
         <section className="flex flex-col gap-7">
-          <div id="user-title-city" className="text-[13px] text-[#7cf5c8] tracking-[2px] uppercase">
+          <div
+            id="user-title-city"
+            className="text-[13px] text-[#7cf5c8] tracking-[2px] uppercase"
+          >
             {user.title} · {user.city}
           </div>
 
@@ -28,6 +46,11 @@ export default function Home() {
           <p className="max-w-160 m-0 text-[19px]/[1.6] text-[#a1aab3]">
             {user.desirre}
           </p>
+
+          <div className="flex flex-wrap gap-4">
+            <CostumeButton button={projectButton} />
+            <CostumeButton button={donwloadCVButton} />
+          </div>
         </section>
       </main>
     </div>
