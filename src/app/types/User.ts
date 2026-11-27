@@ -3,4 +3,6 @@ export type User = {
   title: string;
   city: string;
   email: string;
+  introduction: string;
+  desirre: string;
 };
